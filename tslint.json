@@ -1,6 +1,6 @@
 {
-  "extends": "tslint:recommended",
-  "rulesDirectory": [
+  "extends": ["tslint:recommended", "tslint-plugin-prettier", "tslint-config-prettier"],
+    "rulesDirectory": [
     "codelyzer"
   ],
   "rules": {
