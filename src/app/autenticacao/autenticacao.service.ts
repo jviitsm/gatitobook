@@ -12,9 +12,9 @@ export class AutenticacaoService {
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService) { }
 
   autenticar(usuario: string, senha: string): Observable<any> {
-    return this.httpClient.post('http://localhost:3000/login', {
-      usuario,
-      senha}
+    return this.httpClient.post('http://localhost:3000/user/login', {
+      userName: usuario,
+      password: senha}
       ,{observe: 'response'}).
       pipe(
         tap(
