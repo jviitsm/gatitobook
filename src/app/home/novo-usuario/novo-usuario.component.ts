@@ -1,4 +1,4 @@
-import { Usuario } from './usuario';
+import { INovoUsuario } from './novo-usuario';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NovoUsuarioService } from './novo-usuario.service';
@@ -36,7 +36,7 @@ export class NovoUsuarioComponent implements OnInit {
   }
 
   cadastrar(): void{
-    const user = this.novoUsuarioForm.getRawValue() as Usuario
+    const user = this.novoUsuarioForm.getRawValue() as INovoUsuario
     console.log(user);
   }
 
