@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +11,8 @@ import { AnimalComponent } from './animal/animal.component';
   declarations: [ListaAnimaisComponent, AnimalComponent],
   imports: [
     CommonModule,
-    AnimaisRoutingModule
+    AnimaisRoutingModule,
+    HttpClientModule
   ]
 })
 export class AnimaisModule { }
