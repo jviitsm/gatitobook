@@ -12,7 +12,7 @@ const routes: Routes = [
       component: LoginComponent
     },
     {
-      path: 'novoUsuario',
+      path: 'novousuario',
       component: NovoUsuarioComponent
     }
   ]},
