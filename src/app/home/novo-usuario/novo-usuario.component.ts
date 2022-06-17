@@ -1,4 +1,7 @@
+import { Usuario } from './usuario';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { NovoUsuarioService } from './novo-usuario.service';
 
 @Component({
   selector: 'app-novo-usuario',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoUsuarioComponent implements OnInit {
 
-  constructor() { }
+  novoUsuarioForm!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder,
+     private novoUsuarioService: NovoUsuarioService) { }
 
   ngOnInit(): void {
+    this.novoUsuarioForm = this.formBuilder.group({
+      email: [''],
+      fullName: [''],
+      userName: [''],
+      password: ['']
+    });
+  }
+
+  cadastrar(): void{
+    const user = this.novoUsuarioForm.getRawValue() as Usuario
+    console.log(user);
   }
 
 }
