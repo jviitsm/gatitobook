@@ -45,6 +45,13 @@
       "
       mensagem="O Campo usuário deve ser minusculo"
     ></app-mensagem>
+    <app-mensagem
+      *ngIf="
+        novoUsuarioForm.get('userName')?.errors?.usuarioExistente &&
+        novoUsuarioForm.get('userName')?.touched
+      "
+      mensagem="Usuário indisponivel!"
+    ></app-mensagem>
   </div>
   <div class="form-group mb-2">
     <input
