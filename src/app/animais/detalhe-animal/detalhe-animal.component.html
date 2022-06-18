@@ -19,6 +19,13 @@
         </i>
         <i (click)="excluir()" class="fa fa-trash-o fa-2x ml-1"></i>
       </small>
+      <app-comentarios
+        [id]="animalId"
+        *ngIf="animal.allowComments; else warning"
+      ></app-comentarios>
+      <ng-template #warning>
+        <p>Usuário não pode pode comentar o animal!</p>
+      </ng-template>
     </div>
   </div>
 </div>
