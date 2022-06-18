@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     RouterModule,
     CabecalhoModule,
-    RodapeModule
+    RodapeModule,
+    AutenticacaoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
